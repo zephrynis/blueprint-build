@@ -1,2 +1,2 @@
-# blueprint-build
-GH Action to build a blueprint addon
+# blueprint-export
+GH Action to export a blueprint addon
