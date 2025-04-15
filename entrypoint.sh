@@ -20,5 +20,4 @@ identifier=$(grep -m 1 "identifier:" /app/.blueprint/dev/conf.yml | cut -d ":" -
 echo "Copying output back to workspace"
 cp "/app/${identifier}.blueprint" "/github/workspace/${identifier}.blueprint"
 
-# Set output if needed
-echo "blueprint_file=${identifier}.blueprint" >> $GITHUB_OUTPUT
+echo "file=${identifier}.blueprint" >> $GITHUB_OUTPUT
