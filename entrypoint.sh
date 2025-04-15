@@ -7,6 +7,11 @@ cp -R /github/workspace/ /app/.blueprint/dev/
 echo "Patching export script"
 sed -i '4d' /app/scripts/commands/developer/export.sh
 
+cd /app/.blueprint/dev
+ls
+
+cd /app/
+
 echo "Running blueprint export"
 blueprint -export
 
