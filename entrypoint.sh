@@ -2,7 +2,7 @@
 set -e
 
 echo "Copying repo files into container"
-cp -R /github/workspace/ /app/.blueprint/dev/
+cp -R /github/workspace/. /app/.blueprint/dev/
 
 echo "Patching export script"
 sed -i '4d' /app/scripts/commands/developer/export.sh
