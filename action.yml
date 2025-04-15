@@ -1,8 +1,8 @@
-name: 'Blueprint Build'
-description: 'Builds a blueprint addon'
+name: 'Blueprint Export'
+description: 'Exports a blueprint addon'
 outputs:
   file:
-    description: 'The path to the built addon file'
+    description: 'The path to the exported addon file'
 runs:
   using: 'docker'
   image: 'Dockerfile'
