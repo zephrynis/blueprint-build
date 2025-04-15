@@ -4,8 +4,11 @@ set -e
 echo "Copying repo files into container"
 cp -R /github/workspace/ /app/.blueprint/dev/
 
-echo "Running blueprint build"
-blueprint -build
+echo "Patching export script"
+sed -i '4d' /app/scripts/commands/developer/export.sh
+
+echo "Running blueprint export"
+blueprint -export
 
 identifier=$(grep -m 1 "identifier:" /app/.blueprint/dev/conf.yml | cut -d ":" -f2 | xargs)
 
